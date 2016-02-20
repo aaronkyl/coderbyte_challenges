@@ -1,0 +1,27 @@
+var str = "testING";
+
+var alphabetList = "abcdefghijklmnopqrstuvwxyz";
+var alphabetArray = alphabetList.split("");
+var alphabetArrayCaps = alphabetList.toUpperCase().split("");
+
+var testStringArray = str.toLowerCase().split("");
+
+for (var i = 0; i < testStringArray.length; i++) {
+  if (testStringArray[i] === "z") {
+    testStringArray[i] = "a";
+  } else if (alphabetArray.indexOf(testStringArray[i]) !== -1) {
+    testStringArray[i] = alphabetArray[alphabetArray.indexOf(testStringArray[i]) + 1];
+  } else {
+    testStringArray[i] = testStringArray[i];
+  }
+}
+
+str = testStringArray.join("");
+
+str = str.replace(/a/g, "A");
+str = str.replace(/e/g, "E");
+str = str.replace(/i/g, "I");
+str = str.replace(/o/g, "O");
+str = str.replace(/u/g, "U");
+
+console.log(str);
