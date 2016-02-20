@@ -1,3 +1,12 @@
+// shift every letter in a string once to the right in the alphabet and capitalize all vowels
+
+// have array of alphabet
+// put string into second array
+// find string character in alphabet array
+// reassign string character to alphabet array index + 1
+// if letter is z, string character = a
+// ignore punctuation
+
 var str = "testING";
 
 var alphabetList = "abcdefghijklmnopqrstuvwxyz";
