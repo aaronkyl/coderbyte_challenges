@@ -9,10 +9,7 @@
 
 var str = "testING";
 
-var alphabetList = "abcdefghijklmnopqrstuvwxyz";
-var alphabetArray = alphabetList.split("");
-var alphabetArrayCaps = alphabetList.toUpperCase().split("");
-
+var alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
 var testStringArray = str.toLowerCase().split("");
 
 for (var i = 0; i < testStringArray.length; i++) {
