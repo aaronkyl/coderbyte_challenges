@@ -1,0 +1,30 @@
+// Using the JavaScript language, have the function  SimpleSymbols(str) take the
+//  str parameter being passed and determine if it is an acceptable sequence by
+// either returning the string true or false. The str parameter will be composed
+// of + and = symbols with several letters between them (ie. ++d+===+c++==a) and
+// for the string to be true each letter must be surrounded by a + symbol. So
+// the string to the left would be false. The string will not be empty and will
+// have at least one letter.
+
+// store string as var, all lower case
+// store alphabet as an array
+// cycle through string and determine if char at index is in alphabet array
+// if true, are chars at i - 1 and i + 1 === "+"?
+// if true, continue cycling; if false, return false
+
+var string = "++R+==+=+y+==+u+y";
+var alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
+function SimpleSymbols(str) {
+  str = str.toLowerCase();
+  for (var i = 0; i < str.length; i++) {
+    if (alphabetArray.indexOf(str.charAt(i)) !== -1) {
+      if (str.charAt(i - 1) !== "+" || str.charAt(i + 1) !== "+") {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+
+console.log(SimpleSymbols(string));
