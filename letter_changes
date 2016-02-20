@@ -1,33 +1,31 @@
 // shift every letter in a string once to the right in the alphabet and capitalize all vowels
 
-// have array of alphabet
-// put string into second array
-// find string character in alphabet array
-// reassign string character to alphabet array index + 1
-// if letter is z, string character = a
-// ignore punctuation
+// have an array of the alphabet
+// turn string into lowercase array
+// cycle through string array
+// if character = z, change to a
+// if character in alphabet array, character = alphabet array index + 1
+// replace all vowels with capitalized vowel
 
-var str = "testING";
-
+var stringArray = "This iz a test, and onLY A tEST!!".toLowerCase().split("");
 var alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
-var testStringArray = str.toLowerCase().split("");
 
-for (var i = 0; i < testStringArray.length; i++) {
-  if (testStringArray[i] === "z") {
-    testStringArray[i] = "a";
-  } else if (alphabetArray.indexOf(testStringArray[i]) !== -1) {
-    testStringArray[i] = alphabetArray[alphabetArray.indexOf(testStringArray[i]) + 1];
-  } else {
-    testStringArray[i] = testStringArray[i];
+for (var i = 0; i < stringArray.length; i++) {
+  if (stringArray[i] === "z") {
+    stringArray[i] = "a";
+  } else if (alphabetArray.indexOf(stringArray[i]) !== -1) {
+    stringArray[i] = alphabetArray[alphabetArray.indexOf(stringArray[i]) + 1];
   }
 }
 
-str = testStringArray.join("");
+var shiftedString = stringArray.join("");
 
-str = str.replace(/a/g, "A");
-str = str.replace(/e/g, "E");
-str = str.replace(/i/g, "I");
-str = str.replace(/o/g, "O");
-str = str.replace(/u/g, "U");
+shiftedString = shiftedString.replace(/a/g, "A");
+shiftedString = shiftedString.replace(/e/g, "E");
+shiftedString = shiftedString.replace(/i/g, "I");
+shiftedString = shiftedString.replace(/o/g, "O");
+shiftedString = shiftedString.replace(/u/g, "U");
 
-console.log(str);
+
+
+console.log(shiftedString);
