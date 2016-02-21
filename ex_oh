@@ -23,5 +23,5 @@ function ExOh(str) {
 console.log(ExOh(string));
 
 /* someone else's code below -
-return str.split(/x/i).length === str.split(/o/i).length; // what is this i thing for?
+return str.split(/x/i).length === str.split(/o/i).length; // what is this i thing for? - RegExp for case-insensitive matching
 */
