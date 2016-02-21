@@ -48,3 +48,27 @@ function sum(arr){
     return eval(arr.join('+'));  // eval() evaluates the string as a JS statement
 }
 */
+/* my code after understanding the concepts used by that other guy
+
+var findLargest = function(array) {
+  return array.sort(function(a,b) {return a - b;}).pop(); // sort array using num vals instead of unicode and remove largest
+}
+
+var sumArray = function(array) {
+  return eval(array.join("+"));   // turn the array into a string with + between each value then have it evaluated
+}
+
+var ArrayAdditionI = function(array, largestNum) {
+  if (sumArray(array) === largestNum) {
+    return true;
+  }
+  else {
+    for (var i = 0; i < array.length; i++) {    // ***Aaron, don't forget the var before i or this doesn't work correctly
+      var array2 = array.slice(0);    // make a copy of the array that I will edit and send back into the function
+      array2.splice(i, 1);
+      ArrayAdditionI(array2, largestNum);
+    }
+  }
+  return false;
+}
+*/
